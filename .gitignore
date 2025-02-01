@@ -1,0 +1,5 @@
+# Ignore hosting-details.txt
+hosting-details.txt
+
+# Ignore all .zip files
+*.zip

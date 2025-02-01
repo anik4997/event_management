@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2025 at 09:54 AM
+-- Generation Time: Feb 01, 2025 at 09:05 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `movie_rating`
+-- Database: `event_management`
 --
 
 -- --------------------------------------------------------
@@ -44,11 +44,9 @@ CREATE TABLE `attendee_registration` (
 --
 
 INSERT INTO `attendee_registration` (`id`, `name_attendee`, `phone_attendee`, `email_attendee`, `attendee_opinion`, `user_id`, `id_event`, `created_at`, `updated_at`) VALUES
-(23, 'Oli Ahammed Sarker', '01600000127', 'oliahammed65@gmail.com', 'hukihkj', 54, 1, '2025-01-31 23:33:30', '2025-01-31 23:33:30'),
-(24, 'Oli Ahammed Sarker', '01600000127', 'oliahammed65@gmail.com', 'sdfsd', 53, 52, '2025-02-01 12:09:37', '2025-02-01 12:09:37'),
-(25, 'Oli Ahammed Sarker', '1600000127', 'oliahammed65@gmail.com', 'dsfsdf', 53, 1, '2025-02-01 13:04:25', '2025-02-01 13:04:25'),
-(26, 'Oli Ahammed Sarker', '1627324997', 'oliahammed02@gmail.com', 'sdfsd', 53, 42, '2025-02-01 13:04:31', '2025-02-01 13:04:31'),
-(27, 'Oli Ahammed Sarker', '1600000127', 'oliahammed65@gmail.com', 'sdfsdf', 53, 46, '2025-02-01 14:12:25', '2025-02-01 14:12:25');
+(28, 'Oli Ahammed Sarker', '1600000127', 'oliahammed65@gmail.com', 'sdfsdf', 54, 1, '2025-02-01 15:49:11', '2025-02-01 15:49:11'),
+(32, 'Oli Ahammed Sarker', '1600000127', 'oliahammed65@gmail.com', 'fsdfsf', 53, 42, '2025-02-01 16:03:36', '2025-02-01 16:03:36'),
+(33, 'Oli Ahammed Sarker', '1600000128', 'oliahammed02@gmail.com', 'dsfsdfsf', 1, 1, '2025-02-01 16:05:14', '2025-02-01 16:05:14');
 
 -- --------------------------------------------------------
 
@@ -126,7 +124,10 @@ ALTER TABLE `event`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_table_phone` (`phone`),
+  ADD KEY `user_table_email` (`email`(768)),
+  ADD KEY `user_table_password` (`password`(768));
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -136,7 +137,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `attendee_registration`
 --
 ALTER TABLE `attendee_registration`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `event`

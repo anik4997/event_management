@@ -57,7 +57,7 @@ A fully functional **Event Management System** built with **PHP, MySQL, jQuery, 
 1. **Download & Install XAMPP** (https://www.apachefriends.org/index.html).
 2. **Clone the Repository**:
  ```sh
- git clone https://github.com/your-username/event-management.git
+ git clone https://github.com/anik4997/event-management.git
 
 mv event-management C:\xampp\htdocs\
 
@@ -147,7 +147,7 @@ Project Structure
 - **jQuery** (3.6.0)  
 - **Bootstrap 5**  
 - **AJAX**  
-
+- **Database is properly formatted for specific fields**
 
 
 Contact

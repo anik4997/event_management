@@ -2,7 +2,7 @@
 session_start();
 require_once 'classes/FetchEvent.php'; 
 
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_id']) && $_SESSION['role'] != 1) {
     header("Location: index.php");
     exit;
 }
@@ -38,7 +38,7 @@ while ($row = mysqli_fetch_assoc($attendees)) {
         $row['email_attendee'],
         $row['attendee_opinion'],
         $row['event_name'],
-        $row['user_id'],
+        $row['name_attendee'],
     ]);
 }
 

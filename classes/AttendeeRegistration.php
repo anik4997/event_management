@@ -14,6 +14,11 @@ class AttendeeRegistration{
 
         header('Content-Type: application/json');
         ob_clean();
+
+        $event_id = $attendee_registration['event_id'];
+        $fetch_event_obj = new FetchEvent();
+        $attendee_data = $fetch_event_obj->attendee_list($event_id);
+
         $errors = [];
         if (empty($_POST['name_attendee'])) {
             $errors['name_attendee'] = "Name is required!";
@@ -31,6 +36,15 @@ class AttendeeRegistration{
             $errors['email_attendee'] = "Enter a valid email address!";
         }
 
+        while($row = mysqli_fetch_assoc($attendee_data)){
+            if ($_POST['email_attendee'] == $row['email_attendee']) {
+                $errors['email_attendee'] = "This email is already registered";
+            }
+            if ($_POST['phone_attendee'] == $row['phone_attendee']) {
+                $errors['phone_attendee'] = "This phone no is already registered";
+            }
+        }
+
         if (!empty($errors)) {
             echo json_encode(['success' => false, 'errors' => $errors]);
             exit;
@@ -42,7 +56,6 @@ class AttendeeRegistration{
         $phone_attendee = $attendee_registration['phone_attendee'];
         $email_attendee = $attendee_registration['email_attendee'];
         $attendee_opinion = $attendee_registration['attendee_opinion'];
-        $event_id = $attendee_registration['event_id'];
         $user_id = $attendee_registration['user_id'];
     
         $fetch_event_query = "SELECT max_capacity FROM event WHERE id = ?";
@@ -53,8 +66,6 @@ class AttendeeRegistration{
         if ($event_data) {
             $max_capacity = $event_data['max_capacity'];
     
-            $fetch_event_obj = new FetchEvent();
-            $attendee_data = $fetch_event_obj->attendee_list($event_id);
             $current_attendee_count = ($attendee_data) ? mysqli_num_rows($attendee_data) : 0;
     
             if ($current_attendee_count >= $max_capacity) {

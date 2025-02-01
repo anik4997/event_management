@@ -1,0 +1,13 @@
+body{
+    padding: 20px;
+}
+/* Bootstrap class edit */
+ .custom_select{
+    width: 30%; 
+    margin-right: 10px;
+    display: inline;
+ }
+.search_field{
+    width: 30%;
+    display: inline !important; 
+}

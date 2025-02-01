@@ -118,37 +118,42 @@ Project Structure
 │   ├── user_registration_ajax.php
 
 
-🔒 Security Measures
-Google reCAPTCHA: Prevents brute force attacks on login.
-Prepared Statements: Prevents SQL injection.
-AJAX Requests: Securely handles all user interactions.
-Client-Side & Server-Side Validation:
-Ensures all required fields are filled.
-Prevents bypassing validation via developer tools.
-Unauthorized Access Prevention:
-Normal users cannot access admin features.
-Even if buttons are manually enabled, backend validation blocks unauthorized actions.
-💡 Future Enhancements
-Email Notifications: Send confirmation emails for event registration.
-User Profile Management: Allow users to update their details.
-Multiple User Roles: Introduce event managers with restricted admin access.
-💻 Tech Stack
-PHP (v8.2.12)
-MariaDB (10.4.32)
-jQuery (3.6.0)
-Bootstrap 5
-AJAX
+## 🔒 Security Measures
 
-
-Contact
-For any queries, reach out via [Your Email] or open an issue in the repository.
-
+- **Google reCAPTCHA**: Prevents brute force attacks on login.  
+- **Prepared Statements**: Prevents SQL injection.  
+- **AJAX Requests**: Securely handles all user interactions.  
+- **Client-Side & Server-Side Validation**:  
+  - Ensures all required fields are filled.  
+  - Prevents bypassing validation via developer tools.  
+- **Unauthorized Access Prevention**:  
+  - Normal users **cannot** access admin features.  
+  - Even if buttons are manually enabled, backend validation blocks unauthorized actions.  
 
 ---
 
-### 📌 Notes:
-- Replace `http://your-server-url` with your actual server URL.
-- Change `your-username` in the GitHub URL to your actual username.
-- Update the contact section with your actual email if needed.
+## 💡 Future Enhancements
+
+- **Email Notifications**: Send confirmation emails for event registration.  
+- **User Profile Management**: Allow users to update their details.  
+- **Multiple User Roles**: Introduce event managers with restricted admin access.  
+
+---
+
+## 💻 Tech Stack
+
+- **PHP** (v8.2.12)  
+- **MariaDB** (10.4.32)  
+- **jQuery** (3.6.0)  
+- **Bootstrap 5**  
+- **AJAX**  
+
+
+
+Contact
+For any queries, reach out via 'oliahammed02@gmail.com' or open an issue in the repository.
+
+
+---
 
 This README is fully formatted for GitHub and provides a **clear, structured** overview of your project! 🚀 Let me know if you need modifications. 😊

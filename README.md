@@ -46,7 +46,7 @@ A fully functional **Event Management System** built with **PHP, MySQL, jQuery, 
   - Download event details and attendee lists in CSV format.
   - Admin-only access with backend validation.
 - **Public API Endpoint**:
-  - Fetch event details programmatically: http://your-server-url/event_api_json.php?event_id=EVENT_ID
+  - Fetch event details programmatically: http://event-management-oli.infinityfreeapp.com//event_api_json.php?event_id=EVENT_ID
 
   - Replace `EVENT_ID` with the event number (e.g., `1`, `2`, `3`).
 
@@ -77,6 +77,14 @@ Start XAMPP:
 Start Apache & MySQL from the XAMPP Control Panel.
 Run the Application:
 Open browser and go to: http://localhost/event-management/
+
+
+Test user:
+  -Admin username: rifat@gmail.com
+  -Admin password: 123456789
+
+  -Normal username: atik@gmail.com
+  -Normal user password: 123456789
 
 Project Structure
 

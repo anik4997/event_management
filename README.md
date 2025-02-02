@@ -134,8 +134,6 @@ Project Structure
 
 ## 💡 Future Enhancements
 
-- **Email Notifications**: Send confirmation emails for event registration.  
-- **User Profile Management**: Allow users to update their details.  
 - **Multiple User Roles**: Introduce event managers with restricted admin access.  
 
 ---
